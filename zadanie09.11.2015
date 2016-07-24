@@ -1,0 +1,15 @@
+sprawdzić skrypty:
+mkmd # dysk 16T tworzy dysk 18T
+lsmd
+rmmd # opcja -d nie działa
+
+skrypt vbox-latest
+
+prezentacja iem.pw.edu.pl/pub/DOC/ZFS/Improving System ...
+
+kreacja raidz, raidz2, mirror, vdev
+skrypty /usr/local/zetis/sbin/*zfs*
+
+debugowanie sh -x sktypt.sh
+
+usuwanie dysku fizycznego na starcie

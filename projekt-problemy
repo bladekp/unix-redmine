@@ -1,0 +1,54 @@
+Boot loader too large # był 1024k, zmniejszyłem do 64k
+
+Installing darkfish documentation for mime-types-1.25.1
+ERROR:  While executing gem ... (RDoc::Error)
+    error generating /usr/ports/misc/rubygem-mime-types1/work/stage/usr/local/lib/ruby/gems/2.1/doc/mime-types-1.25.1/rdoc/Rakefile.html: Error while evaluating /usr/local/lib/ruby/gems/2.1/gems/rdoc-3.12.2/lib/rdoc/generator/template/darkfish/page.rhtml: undefined method `chomp' for nil:NilClass (RDoc::Error)
+*** Error code 1
+
+Stop.
+make[4]: stopped in /usr/ports/misc/rubygem-mime-types1
+*** Error code 1
+
+Stop.
+make[3]: stopped in /usr/ports/mail/rubygem-mail25
+*** Error code 1
+
+Stop.
+make[2]: stopped in /usr/ports/mail/rubygem-actionmailer
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/ports/www/rubygem-rails
+*** Error code 1
+
+Stop.
+make: stopped in /usr/ports/www/redmine
+
+
+
+Installing darkfish documentation for sass-3.4.21
+ERROR:  While executing gem ... (RDoc::Error)
+    error generating /usr/ports/textproc/rubygem-sass/work/stage/usr/local/lib/ruby/gems/2.1/doc/sass-3.4.21/rdoc/Rakefile.html: Error while evaluating /usr/local/lib/ruby/gems/2.1/gems/rdoc-3.12.2/lib/rdoc/generator/template/darkfish/page.rhtml: undefined method `chomp' for nil:NilClass (RDoc::Error)
+*** Error code 1
+
+Stop.
+make[3]: stopped in /usr/ports/textproc/rubygem-sass
+*** Error code 1
+
+Stop.
+make[2]: stopped in /usr/ports/textproc/rubygem-sass-rails
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/ports/www/rubygem-rails
+*** Error code 1
+
+Stop.
+make: stopped in /usr/ports/www/redmine
+
+
+
+
+
+
+Can't tell you where that error comes from, but considering how useless installing ri and rdoc actually is

@@ -1,0 +1,11 @@
+zfs
+bez raidu
+konfiguracja portu redmine
+porty są w /usr/ports
+10.146.10.136
+doinstalować wszystko co potrzebne
+zamontować w /usr/ports 
+maszyna maszyn e2
+install-base 
+ls /usr/local/zetis/sbin/*zfs* *freebsd*
+make -C /usr/ports/ -- nginx-devel

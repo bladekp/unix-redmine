@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mkdir -p /net/volt
+mount_nfs volt:/ /net/volt
+mkdir -p /ftp/pub
+mount_nfs amp:/ftp/pub /ftp/pub
+/ftp/pub/FreeBSD/zetis/install/base
+
+

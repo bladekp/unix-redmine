@@ -1,0 +1,31 @@
+#!/bin/sh
+
+adduser -f zalaczniki/redmine-user # dodajemy usera redmine
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+portsnap fetch 	#lokalne pobranie drzewa portów
+portsnap extract  #rozpakowanie drzewa
+
+mkdir -p /var/db/ports/
+cp -R zalaczniki/konfiguracja-porty/* /var/db/ports/*  #pliki z zapisaną konfiguracją portów
+
+make install clean BATCH=yes -C /usr/ports/www/nqinx-devel #nginx-devel: 15 minut
+
+make install clean BATCH=yes -C /usr/ports/www/redmine #redmine: 45 minut
+
+cp zalaczniki/nginx.conf /usr/local/etc/nginx/nginx.conf 
+
+echo "nginx_enable=\"YES\"" >> /etc/rc.conf
+
+cp zalaczniki/database.yml /usr/local/www/redmine/config/database.yml
+cp zalaczniki/secret_token.rb /usr/local/www/redmine/config/initializers/
+
+chown -R redmine:redmine /usr/local/www/redmine # wszystko w katalogu powinno być własnością użytkownika redmine
+chmod -R 755 /usr/local/www/redmine # prawa do plików 
+
+sudo /usr/local/etc/rc.d/nginx start
+
+#aplikacja powinna być już dostępna pod 10.146.10.136
+
